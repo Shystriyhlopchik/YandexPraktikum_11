@@ -1,5 +1,5 @@
     'use strict'
-    import './style.css';
+    import './pages/index.css';
 
     import Api from './scripts/api.js';
     import CardList from './scripts/cardlist.js';

@@ -19,8 +19,8 @@ export default class UserInfo extends NewElement {
           this.about.textContent = user.about;
           this.avatar.style.backgroundImage = `url(${user.avatar})`;
         })
-        .finally(() => {
-          this.renderLoading(false);
+        .finally((data) => {
+          console.log(data);
         })
     }
   }

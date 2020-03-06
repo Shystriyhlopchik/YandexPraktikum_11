@@ -24,8 +24,8 @@ export default class CardList extends NewElement {
                     this.addCard(item);
                 })
             })
-            .finally(() => {
-                this.renderLoading(false);
+            .finally((data) => {
+                console.log(data);;
             })
     }
 }
