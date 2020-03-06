@@ -1,11 +1,14 @@
 // popup всплывающей фотки
-class PopupImage extends Popup {
+'use strict'
+import Popup from './popup.js';
+
+export default class PopupImage extends Popup {
   constructor(imgUrl) {
     super();
     this._imgUrl = imgUrl;
   }
 
-  // разметка для popup
+  //--------------разметка для popup----------------
   get template() {
     return `
       <div class="popup" id="photo-popup">

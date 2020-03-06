@@ -5,6 +5,8 @@
     import CardList from './scripts/cardlist.js';
     import Card from './scripts/card.js';
     import PopupForm from './scripts/popup_form.js';
+    import PopupImage from './scripts/popup_image.js';
+    import UserInfo from './scripts/user_info.js';
 
     // ---------------------------------- Свойства -----------------------------------------------------  //
     // Окно с формой новой карточки
