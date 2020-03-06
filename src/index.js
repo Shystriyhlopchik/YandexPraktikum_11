@@ -4,6 +4,7 @@
     import Api from './scripts/api.js';
     import CardList from './scripts/cardlist.js';
     import Card from './scripts/card.js';
+    
 
     // ---------------------------------- Свойства -----------------------------------------------------  //
     // Окно с формой новой карточки
@@ -67,15 +68,15 @@ const userInfoBlock = document.querySelector(".user-info");
 
 // ---------------------------------- Классы -----------------------------------------------------  //
 
-//const validation = new Validation(); // валидация
+const validation = new Validation(); // валидация
 
 const api = new Api(accessOptions); // API
 
-// const userInfo = new UserInfo(userInfoBlock, api); // информация о пользователе 
+const userInfo = new UserInfo(userInfoBlock, api); // информация о пользователе 
 
-// const editProfilePopup = new PopupForm(editProfilePopupProps, validation, api); // форма редактирования профиля 
+const editProfilePopup = new PopupForm(editProfilePopupProps, validation, api); // форма редактирования профиля 
 
-// const newCardPopup = new PopupForm(newCardPopupProps, validation, api); // форма добавления карточки 
+const newCardPopup = new PopupForm(newCardPopupProps, validation, api); // форма добавления карточки 
 
 const cardListRender = new CardList(placesList, api); // рендер карточек 
 
