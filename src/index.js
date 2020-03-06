@@ -1,3 +1,4 @@
+    import './style.css';
     // <script src="scripts/classes/Api.js"></script>
     // <script src="scripts/classes/NewElement.js"></script>
     // <script src="scripts/classes/Card.js"></script>
