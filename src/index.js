@@ -7,6 +7,7 @@
     import PopupForm from './scripts/popup_form.js';
     import PopupImage from './scripts/popup_image.js';
     import UserInfo from './scripts/user_info.js';
+    import Validation from './scripts/validation.js'
 
     // ---------------------------------- Свойства -----------------------------------------------------  //
     // Окно с формой новой карточки

@@ -1,11 +1,11 @@
-class Validation {
+export default class Validation {
 
     constructor() {
         this.firstFormField = null;
         this.secondFormField = null;
     }
 
-    //проверка условий валидации
+    //-------------проверка условий валидации-----------------
     isValid(elementToCheck) {
         const errorElement = document.querySelector(`#error-${elementToCheck.name}`);
         if (!elementToCheck.validity.valid) {
@@ -31,7 +31,7 @@ class Validation {
         }
     }
 
-    //проверка успеха валидации и контроль кнопки отправки данных
+    //-----проверка успеха валидации и контроль кнопки отправки данных----------
     formInputHandler(event) {
         const validRes = this.isValid(document
             .querySelector('form').elements[`${event.target.name}`]);
@@ -56,20 +56,20 @@ class Validation {
         }
     }
 
-    // очистка полей при отправке данных или закрытии формы 
+    //-----очистка полей при отправке данных или закрытии формы ----
     clearFields() {
         this.firstFormField = null;
         this.secondFormField = null;
     }
 
-    // функция для отключения кнопки submit в обеих формах
+    //----функция для отключения кнопки submit в обеих формах----
     disableButton() {
         const button = event.currentTarget.querySelector("button");
         button.setAttribute("disabled", true);
         button.classList.remove("popup__button_type_en");
     }
 
-    // функция для включения кнопки submit в обеих формах
+    //----функция для включения кнопки submit в обеих формах----
     enableButton() {
         const button = event.currentTarget.querySelector("button");
         button.removeAttribute("disabled");

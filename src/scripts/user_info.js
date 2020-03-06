@@ -1,5 +1,8 @@
 // Получение и отрисовка данных пользователя
-class UserInfo extends NewElement {
+'use strict'
+import NewElement from './newElement.js';
+
+export default class UserInfo extends NewElement {
     constructor(container, api) {
       super();
       this.name = container.querySelector(".user-info__name");
@@ -16,8 +19,8 @@ class UserInfo extends NewElement {
           this.about.textContent = user.about;
           this.avatar.style.backgroundImage = `url(${user.avatar})`;
         })
-        .finally((data) => {
-          console.log(data);
+        .finally(() => {
+          this.renderLoading(false);
         })
     }
   }
