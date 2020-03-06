@@ -1,7 +1,8 @@
+    'use strict'
     import './style.css';
 
     import Api from './scripts/api.js';
-
+    import CardList from './scripts/cardlist.js';
 
     // ---------------------------------- Свойства -----------------------------------------------------  //
     // Окно с формой новой карточки
