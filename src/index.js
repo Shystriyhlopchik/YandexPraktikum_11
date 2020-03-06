@@ -4,7 +4,7 @@
     import Api from './scripts/api.js';
     import CardList from './scripts/cardlist.js';
     import Card from './scripts/card.js';
-    
+    import PopupForm from './scripts/popup_form.js';
 
     // ---------------------------------- Свойства -----------------------------------------------------  //
     // Окно с формой новой карточки
@@ -60,7 +60,7 @@ const addButton = document.querySelector(".user-info__button"); // кнопка 
 
 const editButton = document.querySelector(".user-info__edit-button"); // кнопка открытия редактирования профиля
 
-const rootContainer = document.querySelector(".root"); // main секция страницы
+// const rootContainer = document.querySelector(".root"); // main секция страницы
 
 const placesList = document.querySelector(".places-list"); // блок для карточек
 
