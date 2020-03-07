@@ -7,50 +7,49 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 
-
 module.exports = {
     entry: { main: './src/index.js' },
-    output: 
-    {
+    output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[chunkhash].js'
-    },
+        },
     module: {
         rules: [
             { 
-                test: /\.js$/, 
-                use: { loader: "babel-loader" }, 
-                exclude: /node_modules/ 
-            },
-            {
-                test: /\.(eot|ttf|woff|woff2)$/,
-                use: 
-                [
-                    {
-                        loader: 'file-loader',
-                        options: { name: 'vendor/[name].[ext]' }
-                    }
-                ]
-            },
-            {
-                test: /\.(png|jpg|gif|ico|svg)$/,
-                use: [
-                    'file-loader?name=./images/[name].[ext]',
-                    {
-                        loader: 'image-webpack-loader',
-                        options: {
-                            bypassOnDebug: true,
-                            disable: true,
-                            esModule: false
+            test: /\.js$/, 
+            use: { loader: "babel-loader" }, 
+            exclude: /node_modules/ 
+                },
+                {
+                    test: /\.(eot|ttf|woff|woff2)$/,
+                    use: [
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                name: 'vendor/[name].[ext]'
+                            }
                         }
-                    }
-                ]
-            },
-            {
-                test: /\.css$/,
-                use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 'css-loader', 'postcss-loader']
-            }
-        ]
+                    ]
+                },
+                {
+                    test: /\.(png|jpg|gif|ico|svg)$/,
+                    use: [
+                        'file-loader?name=./images/[name].[ext]',
+                        {
+                            loader: 'image-webpack-loader',
+                            options: {
+                                bypassOnDebug: true,
+                                disable: true,
+                                esModule: false
+                            }
+                        }
+                    ]
+                },
+                {
+                    test: /\.css$/,
+                    use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 'css-loader', 'postcss-loader']
+                }
+            ]
     },
     plugins: [
         new MiniCssExtractPlugin({
