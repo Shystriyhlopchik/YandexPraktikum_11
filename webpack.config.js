@@ -16,40 +16,40 @@ module.exports = {
     module: {
         rules: [
             { 
-            test: /\.js$/, 
-            use: { loader: "babel-loader" }, 
-            exclude: /node_modules/ 
-                },
-                {
-                    test: /\.(eot|ttf|woff|woff2)$/,
-                    use: [
-                        {
-                            loader: 'file-loader',
-                            options: {
-                                name: 'vendor/[name].[ext]'
-                            }
+                test: /\.js$/, 
+                use: { loader: "babel-loader" }, 
+                exclude: /node_modules/ 
+            },
+            {
+                test: /\.(eot|ttf|woff|woff2)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'vendor/[name].[ext]'
                         }
-                    ]
-                },
-                {
-                    test: /\.(png|jpg|gif|ico|svg)$/,
-                    use: [
-                        'file-loader?name=./images/[name].[ext]',
-                        {
-                            loader: 'image-webpack-loader',
-                            options: {
-                                bypassOnDebug: true,
-                                disable: true,
-                                esModule: false
-                            }
+                    }
+                ]
+            },
+            {
+                test: /\.(png|jpg|gif|ico|svg)$/,
+                use: [
+                    'file-loader?name=./images/[name].[ext]',
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            bypassOnDebug: true,
+                            disable: true,
+                            esModule: false
                         }
-                    ]
-                },
-                {
-                    test: /\.css$/,
+                    }
+                ]
+            },
+            {
+                test: /\.css$/,
                     use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 'css-loader', 'postcss-loader']
-                }
-            ]
+            }
+        ]
     },
     plugins: [
         new MiniCssExtractPlugin({
