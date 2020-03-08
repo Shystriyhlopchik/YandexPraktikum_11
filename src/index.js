@@ -63,8 +63,6 @@ const addButton = document.querySelector(".user-info__button"); // кнопка 
 
 const editButton = document.querySelector(".user-info__edit-button"); // кнопка открытия редактирования профиля
 
-// const rootContainer = document.querySelector(".root"); // main секция страницы
-
 const placesList = document.querySelector(".places-list"); // блок для карточек
 
 const userInfoBlock = document.querySelector(".user-info");
